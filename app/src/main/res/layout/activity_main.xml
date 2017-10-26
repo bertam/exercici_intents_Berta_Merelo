@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bertiwi.exercici_intents_berta_merelo.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_android"
+        android:contentDescription="@string/android_icon"
+        android:id="@+id/main_image"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_product_name"
+        android:layout_toEndOf="@id/main_image"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@id/main_image"
+        android:id="@+id/nombre"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_product_stock"
+        android:layout_toEndOf="@id/main_image"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignTop="@id/main_image"
+        android:id="@+id/stock"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cantidad_default"
+        android:layout_alignTop="@id/stock"
+        android:id="@+id/cantidad_def"
+        android:paddingLeft="40dp"
+        android:layout_alignParentEnd="true"
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_cancel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/main_cancel"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_buy"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/main_button" />
+
+
+</RelativeLayout>

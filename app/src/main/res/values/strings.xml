@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">exercici_intents_Berta_Merelo</string>
+    <string name="android_icon">android_icon</string>
+    <string name="main_product_name">Nombre</string>
+    <string name="main_product_stock">Stock</string>
+    <string name="cantidad_default">0</string>
+    <string name="main_buy">BUY</string>
+    <string name="main_cancel">CANCEL</string>
+    <string name="main_OK_message">"Se han comprado %1$d unidades de %2$s objetos"</string>
+</resources>
