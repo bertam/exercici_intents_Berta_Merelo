@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button_main;
     private Spinner spQuantity;
     private TextView tvName;
-    private static int estock;
+    public static int estock = 20;
 
     public static final String SELECTED_QUANTITY = "selected_quantity";
     @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_main = (Button) findViewById(R.id.main_button);
         button_main.setOnClickListener(this);
 
-        View btCancel = findViewById(R.id.main_cancel); //no hace falta crear un botoon pq la desto set visibility es de la calse view
+        View btCancel = findViewById(R.id.main_cancel); //no hace falta crear un botoon pq el metodo set visibility es de la clase view
         btCancel.setVisibility(View.GONE);
 
     }
@@ -47,10 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (R.id.main_button == view.getId()){
             Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-            int quantituy = (int) spQuantity.getSelectedItem();
+            int quantity = (int) spQuantity.getSelectedItem();
             //int quantity = Integer.valueOf(spQuantity.getText().toString());
             intent.putExtra(SELECTED_QUANTITY, quantity);
             startActivityForResult(intent, 0);
+
         }
     }
 

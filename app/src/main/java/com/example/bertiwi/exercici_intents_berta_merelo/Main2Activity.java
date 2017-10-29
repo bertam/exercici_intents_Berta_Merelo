@@ -12,7 +12,6 @@ import android.widget.Spinner;
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener{
 
     private Spinner spQuantity;
-    private static int estock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +19,19 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main); //si posem la activitatmain es crea el mateix pero volem afegir un botó mes tot i que invisible per la activity main i visible per aquesta
 
         spQuantity = (Spinner) findViewById(R.id.cantidad_def);
-        int quantity = getIntent().getIntExtra(MainActivity.SELECTED_QUANTITY, 0);
         populateSpinner();
+        int quantity = getIntent().getIntExtra(MainActivity.SELECTED_QUANTITY, 0);
         spQuantity.setSelection(quantity);
 
         Button btBuy = (Button) findViewById(R.id.main_button);
         btBuy.setOnClickListener(this);
+        Button btCancel = (Button) findViewById(R.id.main_cancel);
+        btCancel.setOnClickListener(this);
 
     }
     private void populateSpinner(){
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item);
-        for (int i = 0; i <= estock; i++){
+        for (int i = 0; i <= MainActivity.estock; i++){
             adapter.add(i);
         }
         spQuantity.setAdapter(adapter);
@@ -40,7 +41,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.main_button:
-                int quantity = Integer.valueOf(spQuantity.getText().toString());
+                int quantity = (int) spQuantity.getSelectedItem();
                 Intent intent = getIntent();
                 intent.putExtra(MainActivity.SELECTED_QUANTITY, quantity);
                 setResult(RESULT_OK, intent);

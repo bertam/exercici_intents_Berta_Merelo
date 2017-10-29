@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">exercici_intents_Berta_Merelo</string>
     <string name="android_icon">android_icon</string>
-    <string name="main_product_name">Nombre</string>
+    <string name="main_product_name">Android</string>
     <string name="main_product_stock">Stock</string>
     <string name="cantidad_default">0</string>
     <string name="main_buy">BUY</string>
